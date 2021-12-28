@@ -16,7 +16,7 @@ public static class GameLogicInit
     public static void InitializeRegisteredManagers()
     {
 
-        var assembly = typeof(GameLogicInit).Assembly;
+        var assembly = Assembly.GetExecutingAssembly();
         var types = assembly.GetTypes();
 
         Type singletonType = typeof(Singleton<>);
@@ -72,5 +72,20 @@ public static class GameLogicInit
         {
             return generic == (test.IsGenericType ? test.GetGenericTypeDefinition() : test);
         }
+    }
+
+    public static List<Type> GetChildClassByBaseClassName(string baseClassName)
+    {
+        var types = Assembly.GetExecutingAssembly().GetTypes();
+        List<Type> tlist = new List<Type>();
+        foreach (var type in types)
+        {
+            var baseType = type.BaseType;  //获取基类
+            if (baseType != null && baseType.Name == baseClassName)
+            {
+                tlist.Add(type);
+            }
+        }
+        return tlist;
     }
 }

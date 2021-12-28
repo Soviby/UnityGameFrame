@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_16;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_IG;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_16;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_IG;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;ODIN_INSPECTOR;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -36,65 +36,68 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\common\AnimationParams.cs" />
-     <Compile Include="Assets\Scripts\utils\GameObjectUtils.cs" />
-     <Compile Include="Assets\Scripts\utils\MonoSingleton.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\IPanel.cs" />
-     <Compile Include="Assets\Scripts\utils\TransformUtils.cs" />
-     <Compile Include="Assets\Scripts\utils\MyTask\MyTaskRunner.cs" />
-     <Compile Include="Assets\Scripts\utils\data\BuilderConfig.cs" />
-     <Compile Include="Assets\Scripts\utils\MyTask\MyTask.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\ugui_exp\IUIEvent.cs" />
-     <Compile Include="Assets\Scripts\utils\MyTask\ThreadManager.cs" />
-     <Compile Include="Assets\Scripts\utils\DataReader.cs" />
-     <Compile Include="Assets\Scripts\data\Config.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\MyPanelEventListener.cs" />
-     <Compile Include="Assets\Scripts\utils\Logger.cs" />
-     <Compile Include="Assets\Scripts\frame\Base\DisposableCollector.cs" />
-     <Compile Include="Assets\Scripts\game\Modules\Scene\GameScenes\TestScene.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\utils\MyUITools.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\component\My3DRoomImage.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\Tips\Tips.cs" />
-     <Compile Include="Assets\Scripts\game\Modules\LogicLoader\LogicLoaderManager.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\component\MyDrag.cs" />
-     <Compile Include="Assets\Scripts\common\FSMStateID.cs" />
-     <Compile Include="Assets\Scripts\game\UI\PopupWindowTips.cs" />
-     <Compile Include="Assets\Scripts\frame\Helper\FileHelper.cs" />
-     <Compile Include="Assets\Scripts\game\UI\TaskTips.cs" />
-     <Compile Include="Assets\Scripts\common\PatrolData.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\MyPanel.cs" />
-     <Compile Include="Assets\Scripts\frame\Helper\PathHelper.cs" />
-     <Compile Include="Assets\Scripts\frame\Base\IUpdateable.cs" />
-     <Compile Include="Assets\Scripts\frame\Base\IDisposable.cs" />
-     <Compile Include="Assets\Scripts\frame\Helper\StringHelper.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\component\UGUISpriteAnimation.cs" />
-     <Compile Include="Assets\Scripts\utils\ResourceManager.cs" />
-     <Compile Include="Assets\Scripts\game\Modules\Scene\GameScenes\MainScene.cs" />
-     <Compile Include="Assets\Scripts\game\Modules\Scene\GameSceneManager.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\component\MyButton.cs" />
-     <Compile Include="Assets\Scripts\frame\Helper\Extensions\LinqExtensions.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\component\MyText.cs" />
-     <Compile Include="Assets\Scripts\frame\GameLogicInit.cs" />
+     <Compile Include="Assets\Scripts\Common\AnimationParams.cs" />
+     <Compile Include="Assets\Scripts\Utils\GameObjectUtils.cs" />
+     <Compile Include="Assets\Scripts\Utils\MonoSingleton.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\IPanel.cs" />
+     <Compile Include="Assets\Scripts\Utils\TransformUtils.cs" />
+     <Compile Include="Assets\Scripts\Utils\MyTask\MyTaskRunner.cs" />
+     <Compile Include="Assets\Scripts\Utils\data\BuilderConfig.cs" />
+     <Compile Include="Assets\Scripts\Utils\MyTask\MyTask.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\ugui_exp\IUIEvent.cs" />
+     <Compile Include="Assets\Scripts\Utils\MyTask\ThreadManager.cs" />
+     <Compile Include="Assets\Scripts\Utils\DataReader.cs" />
+     <Compile Include="Assets\Scripts\Data\Config.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\MyPanelEventListener.cs" />
+     <Compile Include="Assets\Scripts\Utils\Logger.cs" />
+     <Compile Include="Assets\Scripts\Frame\Base\DisposableCollector.cs" />
+     <Compile Include="Assets\Scripts\Game\Modules\Scene\GameScenes\TestScene.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\utils\MyUITools.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\component\My3DRoomImage.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\Tips\Tips.cs" />
+     <Compile Include="Assets\Scripts\Game\Modules\LogicLoader\LogicLoaderManager.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\component\MyDrag.cs" />
+     <Compile Include="Assets\Scripts\Common\FSMStateID.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\Panel\PopupWindowTips.cs" />
+     <Compile Include="Assets\Scripts\Frame\Helper\FileHelper.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\Panel\TaskTips.cs" />
+     <Compile Include="Assets\Scripts\Common\PatrolData.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\MyPanel.cs" />
+     <Compile Include="Assets\Scripts\Frame\Helper\PathHelper.cs" />
+     <Compile Include="Assets\Scripts\Frame\Base\IUpdateable.cs" />
+     <Compile Include="Assets\Scripts\Frame\Base\IDisposable.cs" />
+     <Compile Include="Assets\Scripts\Frame\Helper\StringHelper.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\component\UGUISpriteAnimation.cs" />
+     <Compile Include="Assets\Scripts\Utils\ResourceManager.cs" />
+     <Compile Include="Assets\Scripts\Game\Modules\Scene\GameScenes\MainScene.cs" />
+     <Compile Include="Assets\Scripts\Game\Modules\Scene\GameSceneManager.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\component\MyButton.cs" />
+     <Compile Include="Assets\Scripts\Frame\Helper\Extensions\LinqExtensions.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\component\MyText.cs" />
+     <Compile Include="Assets\Scripts\Frame\GameLogicInit.cs" />
      <Compile Include="Assets\Scripts\GameMng.cs" />
-     <Compile Include="Assets\Scripts\frame\Helper\UncheckDictionary.cs" />
-     <Compile Include="Assets\Scripts\frame\Global.cs" />
-     <Compile Include="Assets\Scripts\utils\data\GameConfig.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\component\MyHorizontalOrVerticalLayoutGroup.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\component\MyImage.cs" />
-     <Compile Include="Assets\Scripts\frame\Singleton.cs" />
-     <Compile Include="Assets\Scripts\game\TestManager.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\component\MyHorizontalLayoutGroup.cs" />
-     <Compile Include="Assets\Scripts\game\Modules\Camera\CameraManager.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\MyGUIManager.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\component\MyVerticalLayoutGroup.cs" />
-     <Compile Include="Assets\Scripts\data\DBManager.cs" />
-     <Compile Include="Assets\Scripts\sound\SoundManager.cs" />
-     <Compile Include="Assets\Scripts\game\Modules\GM\GMManager.cs" />
-     <Compile Include="Assets\Scripts\utils\ArrayHelper.cs" />
-     <Compile Include="Assets\Scripts\common\FSMTriggerID.cs" />
-     <Compile Include="Assets\Scripts\game\UI\ProgressPanel.cs" />
-     <Compile Include="Assets\Scripts\utils\GameObjectPool.cs" />
-     <Compile Include="Assets\Scripts\frame\ui\utils\ReferenceCollector.cs" />
+     <Compile Include="Assets\Scripts\Frame\Helper\UncheckDictionary.cs" />
+     <Compile Include="Assets\Scripts\Frame\Global.cs" />
+     <Compile Include="Assets\Scripts\Utils\data\GameConfig.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\component\MyHorizontalOrVerticalLayoutGroup.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\component\MyImage.cs" />
+     <Compile Include="Assets\Scripts\Frame\Singleton.cs" />
+     <Compile Include="Assets\Scripts\Game\TestManager.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\component\MyHorizontalLayoutGroup.cs" />
+     <Compile Include="Assets\Scripts\Game\Modules\Camera\CameraManager.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\MyGUIManager.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\component\MyVerticalLayoutGroup.cs" />
+     <Compile Include="Assets\Scripts\Data\DBManager.cs" />
+     <Compile Include="Assets\Scripts\Sound\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\Game\Modules\GM\GMManager.cs" />
+     <Compile Include="Assets\Scripts\Utils\ArrayHelper.cs" />
+     <Compile Include="Assets\Scripts\Common\FSMTriggerID.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\Panel\ProgressPanel.cs" />
+     <Compile Include="Assets\Scripts\Utils\GameObjectPool.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\utils\ReferenceCollector.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\MyUIItem.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\UIItemConfig.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\UIItem\CloseBtnItem.cs" />
      <None Include="Assets\Shaders\FadeShader.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Packages\System.Threading.Tasks.Extensions.4.5.4\version.txt" />
@@ -363,6 +366,24 @@
     </Reference>
     <Reference Include="DemiLib">
         <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.OdinInspector.Editor">
+        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.OdinInspector.Attributes">
+        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Serialization.Config">
+        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Utilities">
+        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Serialization">
+        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Utilities.Editor">
+        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>J:/develop/unity3d/2020.3.16f1c1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -829,6 +850,14 @@
     <ProjectReference Include="Unity.2D.Common.Editor.csproj">
       <Project>{84574c9a-61b9-5952-c531-337a12991e00}</Project>
       <Name>Unity.2D.Common.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj">
+      <Project>{12713f60-09f8-8c87-54e9-549c7f1bdc41}</Project>
+      <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
+      <Project>{ff890610-6605-4bc5-b59c-4f7cffcbd211}</Project>
+      <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,4 @@
-﻿ 
+﻿
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,24 +8,28 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
-public interface IPanel {
+public interface IPanel
+{
     bool IsVisible { get; }
 }
 public class PanelBase : IPanel
 {
     protected GameObject _gameObject;
 
-    public virtual bool IsVisible {
-        get {
-            return false;
+    public bool IsVisible
+    {
+        get
+        {
+            return _gameObject && _gameObject.activeSelf;
         }
     }
 
-    public GameObject gameObject { get => _gameObject;  }
-    public Camera uiCamera { get => CameraManager.Instance.UiCamera;  }
+    public GameObject gameObject { get => _gameObject; }
+    public Camera uiCamera { get => CameraManager.Instance.UiCamera; }
     public MyTaskRunner myTaskRunner = new MyTaskRunner(5);
 
-    public virtual void OnClick(MonoBehaviour behaviour) {
+    public virtual void OnClick(MonoBehaviour behaviour)
+    {
 
     }
 
@@ -40,8 +44,8 @@ public class PanelBase : IPanel
     }
 
     protected virtual void CacheReference()
-    { 
-    
+    {
+
     }
 
     protected virtual void OnShow()

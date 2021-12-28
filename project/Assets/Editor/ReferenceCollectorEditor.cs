@@ -38,6 +38,7 @@ public class ReferenceCollectorEditor : Editor
         typeof(MyImage),
         typeof(MyText),
         typeof(TextMeshProUGUI),
+        typeof(UIItemConfig),
     };
 
     static Type[] sAllNoneComponentTypes =

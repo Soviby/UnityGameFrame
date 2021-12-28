@@ -19,12 +19,12 @@ public class MainScene : SceneBehavior
     public override async UniTask EnterScene(LoadItem item, Action UpdateLoading)
     {
         Debug.Log($"EnterScene--MainScene,Scene.path:{this.Scene.path}");
-        voicer = this.FindGameObject("voicer");
-        item.laod_value = 0.5f;
-        UpdateLoading();
-        await UniTask.Delay(3000);
-        item.laod_value = 0.8f;
-        UpdateLoading();
+        // voicer = this.FindGameObject("voicer");
+        // item.laod_value = 0.5f;
+        // UpdateLoading();
+        // await UniTask.Delay(3000);
+        // item.laod_value = 0.8f;
+        // UpdateLoading();
         MyGUIManager.Instance.Show<PopupWindowTips>().SetData(content: "您好！", okEvent:
         () =>
         {
@@ -38,9 +38,9 @@ public class MainScene : SceneBehavior
         //         Debug.Log("Test!----------------");
         //     });
         // });
-        await UniTask.Delay(3000);
-        item.laod_value = 1f;
-        UpdateLoading();
+        // await UniTask.Delay(3000);
+        // item.laod_value = 1f;
+        // UpdateLoading();
         SoundManager.PlayMusic("event:/bgm_01");
         //SoundManager.PlaySound("event:/bianshen_effect");
         //SoundManager.PlaySound("event:/3d_effect", voicer);

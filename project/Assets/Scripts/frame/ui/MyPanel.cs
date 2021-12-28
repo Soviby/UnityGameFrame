@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System.IO;
+using System;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,17 +9,17 @@ public class MyPanel : PanelBase
 {
     protected string _panelResName;
     MyPanelEventListener _listener = null;
-    public override bool IsVisible => gameObject && gameObject.activeSelf;
 
+    private Dictionary<string, List<MyUIItem>> _uiItemMap = new Dictionary<string, List<MyUIItem>>();
     public void Show()
     {
-        bool isInit = !gameObject;
+        bool isInit = !_gameObject;
         _build(Resources.Load<GameObject>(@"UI\Prefabs\Panel\" + _panelResName), isInit);
     }
 
     public async UniTask AsyncShow(Action callback)
     {
-        bool isInit = !gameObject;
+        bool isInit = !_gameObject;
         var asset = await Resources.LoadAsync<GameObject>(@"UI\Prefabs\Panel\" + _panelResName);
         _build(asset, isInit, callback);
     }
@@ -32,16 +34,47 @@ public class MyPanel : PanelBase
         OnClose();
 
         myTaskRunner.Stop();
-        GameObject.Destroy(gameObject);
+        _closeItems();
+        GameObject.Destroy(_gameObject);
     }
 
     private void _hide()
     {
         if (!IsVisible) return;
-        if (gameObject)
-            gameObject.SetActive(false);
+        if (_gameObject)
+            _gameObject.SetActive(false);
 
         OnHide();
+    }
+
+    private void _initUIItems()
+    {
+        var rc = this._gameObject.GetComponent<ReferenceCollector>();
+        if (rc)
+        {
+            foreach (var data in rc.data)
+            {
+                if (data.gameObject.GetType() == typeof(UIItemConfig))
+                {
+                    var config = (UIItemConfig)data.gameObject;
+                    var uiItem = Activator.
+                                CreateInstance(Type.GetType(config.uiItemClassName))
+                                as MyUIItem;
+                    uiItem.Init(config.gameObject);
+                    if (!_uiItemMap.ContainsKey(config.uiItemClassName))
+                        _uiItemMap.Add(config.uiItemClassName, new List<MyUIItem>());
+                    _uiItemMap[config.uiItemClassName].Add(uiItem);
+                }
+            }
+        }
+    }
+
+    private void _closeItems()
+    {
+        foreach (var kv in _uiItemMap)
+        {
+            kv.Value.ForEach((item) => { item.Close(); });
+        }
     }
 
     private void _build(UnityEngine.Object asset, bool isInit, Action callback = null)
@@ -60,7 +93,7 @@ public class MyPanel : PanelBase
 
     private void _show()
     {
-        gameObject.SetActive(true);
+        _gameObject.SetActive(true);
         OnShow();
     }
     private void _init()
@@ -68,8 +101,9 @@ public class MyPanel : PanelBase
         var canvas = _gameObject.GetComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceCamera;
         canvas.worldCamera = uiCamera;
-
         myTaskRunner.Stop();
+
+        _initUIItems();
     }
     private void _buildPanel()
     {
