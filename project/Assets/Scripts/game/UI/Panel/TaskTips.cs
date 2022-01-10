@@ -13,7 +13,7 @@ public class TaskTips : MyPanel
 
     public TaskTips()
     {
-        _panelResName = "TaskTips";
+
     }
 
     protected override void OnInit()

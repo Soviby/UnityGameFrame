@@ -9,7 +9,7 @@ public class ProgressPanel : MyPanel
 
     public ProgressPanel()
     {
-        _panelResName = "ProgressPanel";
+
     }
 
     protected override void OnInit()

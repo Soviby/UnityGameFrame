@@ -45,6 +45,7 @@
      <Compile Include="Assets\Scripts\Utils\data\BuilderConfig.cs" />
      <Compile Include="Assets\Scripts\Utils\MyTask\MyTask.cs" />
      <Compile Include="Assets\Scripts\Frame\ui\ugui_exp\IUIEvent.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\MyUIItem.cs" />
      <Compile Include="Assets\Scripts\Utils\MyTask\ThreadManager.cs" />
      <Compile Include="Assets\Scripts\Utils\DataReader.cs" />
      <Compile Include="Assets\Scripts\Data\Config.cs" />
@@ -89,15 +90,15 @@
      <Compile Include="Assets\Scripts\Frame\ui\component\MyVerticalLayoutGroup.cs" />
      <Compile Include="Assets\Scripts\Data\DBManager.cs" />
      <Compile Include="Assets\Scripts\Sound\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\UIItemConfig.cs" />
      <Compile Include="Assets\Scripts\Game\Modules\GM\GMManager.cs" />
      <Compile Include="Assets\Scripts\Utils\ArrayHelper.cs" />
      <Compile Include="Assets\Scripts\Common\FSMTriggerID.cs" />
      <Compile Include="Assets\Scripts\Game\UI\Panel\ProgressPanel.cs" />
      <Compile Include="Assets\Scripts\Utils\GameObjectPool.cs" />
      <Compile Include="Assets\Scripts\Frame\ui\utils\ReferenceCollector.cs" />
-     <Compile Include="Assets\Scripts\Frame\ui\MyUIItem.cs" />
-     <Compile Include="Assets\Scripts\Frame\ui\UIItemConfig.cs" />
-     <Compile Include="Assets\Scripts\Game\UI\UIItem\CloseBtnItem.cs" />
+     <Compile Include="Assets\Scripts\Frame\ui\MyUIItemData.cs" />
+     <Compile Include="Assets\Scripts\Game\UI\UIItem\CloseButton.cs" />
      <None Include="Assets\Shaders\FadeShader.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Packages\System.Threading.Tasks.Extensions.4.5.4\version.txt" />
@@ -349,11 +350,26 @@
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>J:/develop/unity3d/2020.3.16f1c1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="Sirenix.OdinInspector.Attributes">
+        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
         <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Packages/System.Runtime.CompilerServices.Unsafe.4.5.3/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="Sirenix.Serialization.Config">
+        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
+    </Reference>
     <Reference Include="DOTween">
         <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Utilities.Editor">
+        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Utilities">
+        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Serialization">
+        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions">
         <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Packages/System.Threading.Tasks.Extensions.4.5.4/lib/netstandard2.0/System.Threading.Tasks.Extensions.dll</HintPath>
@@ -369,21 +385,6 @@
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
         <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.OdinInspector.Attributes">
-        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.Serialization.Config">
-        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.Utilities">
-        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.Serialization">
-        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.Utilities.Editor">
-        <HintPath>G:/workspace/unity3d/UnityGameFrame/project/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>J:/develop/unity3d/2020.3.16f1c1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -807,6 +808,10 @@
       <Project>{0d0a66f6-eb9e-2f64-9190-0fd50ecac50e}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
+      <Project>{ff890610-6605-4bc5-b59c-4f7cffcbd211}</Project>
+      <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
       <Project>{8750734c-8168-cd65-4731-fed93fe3af4e}</Project>
       <Name>Unity.Mathematics</Name>
@@ -847,17 +852,13 @@
       <Project>{7cb34ccc-8640-846c-2941-b7d14f649a3f}</Project>
       <Name>FMODUnityResonance</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Editor.csproj">
-      <Project>{84574c9a-61b9-5952-c531-337a12991e00}</Project>
-      <Name>Unity.2D.Common.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj">
       <Project>{12713f60-09f8-8c87-54e9-549c7f1bdc41}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
-      <Project>{ff890610-6605-4bc5-b59c-4f7cffcbd211}</Project>
-      <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
+    <ProjectReference Include="Unity.2D.Common.Editor.csproj">
+      <Project>{84574c9a-61b9-5952-c531-337a12991e00}</Project>
+      <Name>Unity.2D.Common.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

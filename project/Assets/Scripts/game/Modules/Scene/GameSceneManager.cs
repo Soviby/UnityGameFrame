@@ -52,11 +52,11 @@ public class GameSceneManager : Singleton<GameSceneManager>
         }
         LoadItems.Add("EnterSceneLoad", new LoadItem(totalWeight));
 
-        var progressPanel = MyGUIManager.Instance.GetOrCreatePanel<ProgressPanel>();
+        ProgressPanel progressPanel = null;
         UpdateProgress update = (progress) =>
         {
-            if (progress >= 1) progressPanel.Hide();
-            else progressPanel.Show();
+            if (progress >= 1) progressPanel?.Hide();
+            else progressPanel = MyGUIManager.Instance.Show<ProgressPanel>();
             progressPanel.SetData(progress);
         };
         void UpdateLoading()

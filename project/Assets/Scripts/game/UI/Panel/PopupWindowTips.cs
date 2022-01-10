@@ -14,7 +14,7 @@ public class PopupWindowTips : MyPanel
     Action closeEvent;
     public PopupWindowTips()
     {
-        _panelResName = "PopupWindowTips";
+
     }
 
     protected override void OnInit()
@@ -25,7 +25,7 @@ public class PopupWindowTips : MyPanel
 
     protected override void OnShow()
     {
-
+        this.AddUIItem<CloseButton>(this.subRoot);
     }
 
     public void SetData(string content, string ok_text = "确定", string header_text = "提示", Action okEvent = null, Action closeEvent = null)
@@ -44,6 +44,8 @@ public class PopupWindowTips : MyPanel
     public Button closeButton;
     public TextMeshProUGUI ok;
     public TextMeshProUGUI content;
+    public UIItemConfig testCloseButton;
+    public RectTransform subRoot;
 
     protected override void CacheReference()
     {
@@ -53,6 +55,8 @@ public class PopupWindowTips : MyPanel
         this.closeButton = rc.GetReference<Button>(2); // name: CloseButton
         this.ok = rc.GetReference<TextMeshProUGUI>(3); // name: Text (TMP)
         this.content = rc.GetReference<TextMeshProUGUI>(4); // name: Text (TMP)
+        this.testCloseButton = rc.GetReference<UIItemConfig>(5); // name: TestCloseButton
+        this.subRoot = rc.GetReference<RectTransform>(6); // name: subRoot
     }
 
     #endregion
