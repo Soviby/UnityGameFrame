@@ -1,5 +1,5 @@
+
 using UnityEngine;
-using UnityEngine.UI;
 public class MyUIItem : PanelBase
 {
 
@@ -9,7 +9,7 @@ public class MyUIItem : PanelBase
 
 
         initRC();
-        this.CacheReference();
+        ReferenceCollectorHelper.CacheReferenceHandle(this);
         this.OnInit();
     }
 

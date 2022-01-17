@@ -1,8 +1,5 @@
 using System.Collections.Generic;
-using System.Collections;
-using System.Security.Cryptography;
 using UnityEngine;
-using UnityEngine.UI;
 using Sirenix.OdinInspector;
 public class UIItemConfig : MonoBehaviour
 {

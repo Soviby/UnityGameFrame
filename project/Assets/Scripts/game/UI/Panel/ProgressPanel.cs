@@ -40,7 +40,7 @@ public class ProgressPanel : MyPanel
     public Image fill;
     public TextMeshProUGUI percentage;
 
-    protected override void CacheReference()
+    public void CacheReference()
     {
         var rc = this.gameObject.GetComponent<ReferenceCollector>();
         this.fill = rc.GetReference<Image>(0); // name: Fill

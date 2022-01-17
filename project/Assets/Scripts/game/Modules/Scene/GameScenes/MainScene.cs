@@ -25,11 +25,14 @@ public class MainScene : SceneBehavior
         // await UniTask.Delay(3000);
         // item.laod_value = 0.8f;
         // UpdateLoading();
-        MyGUIManager.Instance.Show<PopupWindowTips>().SetData(content: "您好！", okEvent:
-        () =>
-        {
-            Debug.Log("Test!");
-        });
+        // MyGUIManager.Instance.Show<PopupWindowTips>().SetData(content: "您好！", okEvent:
+        // () =>
+        // {
+        //     Debug.Log("Test!");
+        // });
+
+        MyGUIManager.Instance.AsyncShow<TestPanel>();
+
         // MyGUIManager.Instance.AsyncShow<PopupWindowTips>((ui) =>
         // {
         //     ui.SetData(content: "您好！!!!!!!!!!!!!", okEvent:

@@ -25,6 +25,12 @@ public class MyGUIManager : Singleton<MyGUIManager>, IUpdateable
         {
             className = "PopupWindowTips",
         },
+        ["TestPanel"] =
+        new UIConfig()
+        {
+            className = "TestPanel",
+        },
+
     };
 
     public UIConfig GetPanelConfigByClassType<T>() where T : MyPanel
@@ -96,7 +102,7 @@ public class MyGUIManager : Singleton<MyGUIManager>, IUpdateable
         return panel;
     }
 
-    public void AsyncShow<T>(Action<T> callback) where T : MyPanel, new()
+    public void AsyncShow<T>(Action<T> callback = null) where T : MyPanel, new()
     {
         var panel = GetOrCreatePanel<T>();
         var config = GetPanelConfigByClassType<T>();
@@ -106,7 +112,7 @@ public class MyGUIManager : Singleton<MyGUIManager>, IUpdateable
         }
         panel.AsyncShow(config, () =>
         {
-            callback(panel);
+            callback?.Invoke(panel);
 
         }).Forget();
     }

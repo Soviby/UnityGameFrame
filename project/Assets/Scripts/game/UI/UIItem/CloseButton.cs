@@ -20,7 +20,7 @@ public class CloseButton : MyUIItem
 
     public Button closeBtn;
 
-    protected override void CacheReference()
+    public void CacheReference()
     {
         var rc = this.gameObject.GetComponent<ReferenceCollector>();
         this.closeBtn = rc.GetReference<Button>(0); // name: CloseButton

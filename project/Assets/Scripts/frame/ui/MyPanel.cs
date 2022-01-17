@@ -1,13 +1,11 @@
 ﻿
-using System.IO;
 using System;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class MyPanel : PanelBase
 {
-    MyPanelEventListener _listener = null;
     private UIConfig uIConfig;
 
     public void Show(UIConfig uIConfig)
@@ -54,7 +52,7 @@ public class MyPanel : PanelBase
         {
             _gameObject = GameObject.Instantiate((GameObject)asset);
             _buildPanel();
-            CacheReference();
+            ReferenceCollectorHelper.CacheReferenceHandle(this);
             _init();
             OnInit();
         }
@@ -83,11 +81,6 @@ public class MyPanel : PanelBase
         _gameObject.transform.position = Vector3.zero;
         //加入管理
         MyGUIManager.Instance.AddPanelObject(this);
-
-        if (_listener == null)
-            _listener = new MyPanelEventListener();
-        var eventBase = _gameObject.AddComponent<IUIEvent>();
-        _listener.OnInit(this, eventBase);
 
     }
 }

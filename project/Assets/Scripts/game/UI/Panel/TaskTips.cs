@@ -45,7 +45,7 @@ public class TaskTips : MyPanel
     public MyText text;
     public MyImage quan;
 
-    protected override void CacheReference()
+    public void CacheReference()
     {
         var rc = this.gameObject.GetComponent<ReferenceCollector>();
         this.text = rc.GetReference<MyText>(0); // name: text

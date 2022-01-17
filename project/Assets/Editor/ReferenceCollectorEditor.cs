@@ -10,6 +10,7 @@ using UnityEngine.UI;
 using Component = UnityEngine.Component;
 using Object = UnityEngine.Object;
 using TMPro;
+using UnityEngine.Video;
 //Object并非C#基础中的Object，而是 UnityEngine.Object
 
 //自定义ReferenceCollector类在界面中的显示与功能
@@ -39,6 +40,11 @@ public class ReferenceCollectorEditor : Editor
         typeof(MyText),
         typeof(TextMeshProUGUI),
         typeof(UIItemConfig),
+        typeof(Transform),
+        typeof(RectTransform),
+        typeof(Camera),
+        typeof(Light),
+        typeof(VideoPlayer),
     };
 
     static Type[] sAllNoneComponentTypes =
@@ -70,6 +76,9 @@ public class ReferenceCollectorEditor : Editor
             }
         }
     }
+
+    public static Type[] SAllComponentTypes { get => sAllComponentTypes; set => sAllComponentTypes = value; }
+    public static Type[] SAllComponentTypes1 { get => sAllComponentTypes; set => sAllComponentTypes = value; }
 
     public override void OnInspectorGUI()
     {
@@ -367,13 +376,18 @@ public class ReferenceCollectorEditor : Editor
         for (int i = 0; i < rc.data.Count; ++i)
         {
             var data = rc.data[i];
+            var type = data.gameObject.GetType();
+            var typeName = type.Name;
+            if (type == typeof(UIItemConfig))
+            {
+                continue;
+            }
 
-            var typeName = data.gameObject.GetType().Name;
             strBuilder.Append(indent);
             strBuilder.Append("    this.");
-            strBuilder.Append(data.key.FirstSymbolToLower());
+            strBuilder.Append(data.key);
             strBuilder.Append(" = ");
-            strBuilder.Append(WrapUIControlWidget(data, "rc.GetReference<" + data.gameObject.GetType().Name + ">(" + Convert.ToString(i) + ")"));
+            strBuilder.Append(WrapUIControlWidget(data, "rc.GetReference<" + typeName + ">(" + Convert.ToString(i) + ")"));
             strBuilder.Append(";");
             strBuilder.Append(" // name: ");
             strBuilder.Append(data.gameObject.name);
@@ -391,20 +405,21 @@ public class ReferenceCollectorEditor : Editor
         for (int i = 0; i < rc.data.Count; ++i)
         {
             var data = rc.data[i];
-            var typeName = data.gameObject.GetType().Name;
-            //if (typeName == "UIControlWidget")
-            //{
-            //    var widget = data.gameObject as UIControlWidget;
-            //    typeName = widget.controllerClass;
-            //}
+            var type = data.gameObject.GetType();
+            var typeName = type.Name;
+            if (type == typeof(UIItemConfig))
+            {
+                typeName = (data.gameObject as UIItemConfig).uiItemClassName;
+            }
+            data.key = data.key.FirstSymbolToLower();
             strBuilder.Append(indent);
-            strBuilder.Append($"public {typeName} {data.key.FirstSymbolToLower()};\n");
+            strBuilder.Append($"public {typeName} {data.key};\n");
         }
 
         strBuilder.Append("\n");
 
         strBuilder.Append(indent);
-        strBuilder.Append("protected override void CacheReference()\n");
+        strBuilder.Append("public void CacheReference()\n");
         strBuilder.Append(indent);
         strBuilder.Append("{\n");
         strBuilder.Append(indent);
@@ -418,7 +433,7 @@ public class ReferenceCollectorEditor : Editor
         {
             strBuilder.Append("\n");
             strBuilder.Append(indent);
-            strBuilder.Append("protected override void CacheReference(ReferenceCollector rc)\n");
+            strBuilder.Append("public void CacheReference(ReferenceCollector rc)\n");
             strBuilder.Append(indent);
             strBuilder.Append("{\n");
             strBuilder.Append(indent);

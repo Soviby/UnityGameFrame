@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -39,13 +40,20 @@ public class PanelBase : IPanel
         {
             foreach (var data in rc.data)
             {
-                if (data.gameObject.GetType() == typeof(UIItemConfig))
+                var type = data.gameObject.GetType();
+                if (type == typeof(UIItemConfig))
                 {
                     var config = (UIItemConfig)data.gameObject;
-                    var uiItem = Activator.
-                                CreateInstance(Type.GetType(config.uiItemClassName))
-                                as MyUIItem;
+                    var itemType = Type.GetType(config.uiItemClassName);
+                    var uiItem = Activator.CreateInstance(itemType) as MyUIItem;
                     itemData.AddUIItem(uiItem);
+
+                    var key = data.key;
+                    var fieldInfo = this.GetType().GetField(key);
+                    if (fieldInfo != null)
+                    {
+                        fieldInfo.SetValue(this, uiItem);
+                    }
 
                     uiItem.Init(config.gameObject);
                 }
@@ -73,11 +81,6 @@ public class PanelBase : IPanel
         return uiItem;
     }
 
-    public virtual void OnClick(MonoBehaviour behaviour)
-    {
-
-    }
-
     protected virtual void OnClose()
     {
 
@@ -87,37 +90,12 @@ public class PanelBase : IPanel
     {
 
     }
-
-    protected virtual void CacheReference()
-    {
-
-    }
-
     protected virtual void OnShow()
     {
 
     }
+
     protected virtual void OnHide()
-    {
-
-    }
-
-    public virtual void OnDrag(MyDragData myDragData)
-    {
-
-    }
-
-    public virtual void OnDragStart(MyDragData myDragData)
-    {
-
-    }
-
-    public virtual void OnDragEnd(MyDragData myDragData)
-    {
-
-    }
-
-    public virtual void OnUIRoomLoadComlete(My3DRoomImage my3DRoomImage)
     {
 
     }
