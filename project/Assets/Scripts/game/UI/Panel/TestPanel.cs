@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class TestPanel : MyPanel
 {
-    GameObject target;
+    private GameObject target;
+
     protected override void OnInit()
     {
 
@@ -17,7 +18,7 @@ public class TestPanel : MyPanel
 
         // this.myVideoRawImage.SetData("syf", MyVideoRawImage.VideoImageType.path);
         // this.myVideoRawImage.Play();
-        this.myVideoRawImage.SetData(@"http://vfx.mtime.cn/Video/2019/03/18/mp4/190318231014076505.mp4", MyVideoRawImage.VideoImageType.url);
+        this.myVideoRawImage.SetData(path: @"http://vfx.mtime.cn/Video/2019/03/18/mp4/190318231014076505.mp4", type: MyVideoRawImage.VideoImageType.url);
         this.myVideoRawImage.Play();
     }
 

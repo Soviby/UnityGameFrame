@@ -28,7 +28,8 @@ public class MyVideoRawImage : MyUIItem
         this.videoPlayer.Pause();
     }
 
-    public void SetData(string path, VideoImageType type, VideoPlayer.EventHandler startAction = null, VideoPlayer.EventHandler endAction = null)
+    public void SetData(string path, VideoImageType type, VideoPlayer.EventHandler startAction = null, VideoPlayer.EventHandler endAction = null,
+     VideoPlayer.EventHandler prepareCompletedAction = null)
     {
         this.rt = new RenderTexture(1920, 1080, 16, RenderTextureFormat.ARGB32);
         this.myRawImage.texture = this.rt;
@@ -48,6 +49,8 @@ public class MyVideoRawImage : MyUIItem
             this.videoPlayer.started += startAction;
         if (endAction != null)
             this.videoPlayer.loopPointReached += endAction;
+        if (prepareCompletedAction != null)
+            this.videoPlayer.prepareCompleted += prepareCompletedAction;
     }
 
     protected override void OnClose()
